@@ -1,0 +1,40 @@
+# Virtual environments
+venv/
+env/
+.env/
+
+# Downloaded models and datasets
+src/downloaded_model/
+src/dataset/
+
+# Output directories
+outputs/
+src/outputs/
+
+# Logs
+*.log
+*log*.txt
+
+# Cache
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Wandb
+wandb/
+
+# Model checkpoints
+checkpoints/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# System files
+.DS_Store
