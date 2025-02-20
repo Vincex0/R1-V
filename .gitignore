@@ -2,18 +2,27 @@
 venv/
 env/
 .env/
+r1v-env/
 
 # Downloaded models and datasets
 src/downloaded_model/
 src/dataset/
+models/
+*.zip
 
 # Output directories
 outputs/
 src/outputs/
+output/
+output_single_gpu/
+output_*/
 
 # Logs
 *.log
 *log*.txt
+debug_log*.txt
+single_gpu_run.txt
+vllm_run.txt
 
 # Cache
 __pycache__/
@@ -21,6 +30,7 @@ __pycache__/
 *.class
 .pytest_cache/
 .cache/
+.nfs*
 
 # IDE
 .vscode/
@@ -36,5 +46,20 @@ checkpoints/
 *.bin
 *.safetensors
 
+# Config backups
+*.yaml.bak
+*.yml.bak
+
 # System files
 .DS_Store
+._.DS_Store
+**/.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# Hugging Face cache
+.cache/
+/dev/shm/.cache/
