@@ -1,7 +1,7 @@
 export DEBUG_MODE="true" # Enable Debug if you want to see the rollout of model during RL
 export LOG_PATH="./debug_log_2b.txt"
-export HF_DATASETS_CACHE="/dev/shm/.cache/huggingface/datasets"
-export HF_HOME="/dev/shm/.cache/huggingface"
+export HF_DATASETS_CACHE="/workspace/model_cache/datasets"
+export HF_HOME="/workspace/model_cache"
 # Use token from environment variable - DO NOT hardcode tokens
 if [ -z "${HUGGING_FACE_HUB_TOKEN}" ]; then
     echo "Error: HUGGING_FACE_HUB_TOKEN environment variable is not set"
@@ -13,7 +13,7 @@ torchrun --nproc_per_node=1 \
     --master_port="12345" \
     src/r1-v/src/open_r1/grpo.py \
     --output_dir "./checkpoints/grpo_clevr_2b" \
-    --model_name_or_path "Qwen/Qwen2-VL-2B-Instruct" \
+    --model_name_or_path "bytedance-research/UI-TARS-7B-DPO" \
     --dataset_name "leonardPKU/clevr_cogen_a_train" \
     --max_prompt_length 1024 \
     --per_device_train_batch_size 1 \

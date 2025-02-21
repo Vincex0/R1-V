@@ -80,6 +80,11 @@ conda create -n r1-v python=3.11
 conda activate r1-v
 
 bash setup.sh
+
+(main) root@C.18114449:/workspace/R1-V$ 
+<ch.__version__}\nFlash Attention version: {flash_attn.__version__}')"
+PyTorch version: 2.5.1+cu124
+Flash Attention version: 2.7.4.post1             -> build flash-attn from 
 ```
 
 ### Supported Models

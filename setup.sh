@@ -13,3 +13,5 @@ pip install vllm==0.7.2
 
 # fix transformers version
 pip install git+https://github.com/huggingface/transformers.git@336dc69d63d56f232a183a3e7f52790429b871ef
+
+pip uninstall -y flash-attn && TORCH_CUDA_ARCH_LIST="8.0" pip install flash-attn --no-build-isolation --no-cache-dir
